@@ -11,7 +11,7 @@ def numberOfPointElliptic(a, b, p):
             print (x, p - Q[r])
     return count + 1
 
-print(numberOfPointElliptic(5, 6, 43))
+print(numberOfPointElliptic(4, 3, 13))
 
 # def isPrime(n):
 #     # Corner case
