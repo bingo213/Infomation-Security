@@ -1,14 +1,13 @@
-def power_modulo(x, e, m):
-    power = x
-    a = 1
-    ei = e % 2
-    while(e >= 1):
-        if ei == 1:
-            a = (a * power) % m
-            
-        e = int(e/2)
-        ei = e % 2
-        power = (power * power) % m
-    return a
+def power_modulo(x,e,m):
+    if m == 1:
+        return 0
+    r = 1
+    x = x % m
+    while e > 0:
+        if(e % 2 ==1):
+            r = (r*x)%m
+        e = e >> 1
+        x = (x*x)%m
+    return r
 
 # print(power_modulo(69701, 28135, 28657))
